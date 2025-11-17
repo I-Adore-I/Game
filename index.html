@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Games Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Games Portfolio</h1>
+      <p class="lead">A collection of small games and experiments. Click a card to play or view the source.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="games-grid" class="grid">
+      <!-- Game cards will be injected by script.js -->
+    </section>
+
+    <template id="game-card-template">
+      <article class="card">
+        <div class="card-media">
+          <img class="thumb" src="" alt="Game thumbnail">
+        </div>
+        <div class="card-body">
+          <h3 class="game-title"></h3>
+          <p class="game-desc"></p>
+          <div class="card-actions">
+            <a class="btn play-btn" href="#" target="_blank" rel="noopener">Play</a>
+            <a class="btn source-btn" href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <section id="add-game-panel" class="add-game hidden" aria-hidden="true">
+      <button id="close-add-panel" class="close-btn" aria-label="Close add game panel">×</button>
+      <h2>Add a game</h2>
+      <form id="add-game-form">
+        <input id="title" placeholder="Title" required />
+        <input id="playUrl" placeholder="URL to play (https://...)" required />
+        <input id="sourceUrl" placeholder="Source URL (optional)" />
+        <input id="thumbnail" placeholder="Thumbnail URL (optional)" />
+        <textarea id="description" placeholder="Short description" rows="2"></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn">Add</button>
+          <button type="button" id="reset-btn" class="btn alt">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Made with ❤️ — Open index.html to view locally.</small>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
